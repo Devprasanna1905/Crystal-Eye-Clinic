@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crystal Eye Clinic | Eye Care Center in Chennai</title>
+  <meta name="description"
+    content="Crystal Eye Clinic is an eye care center in Chennai offering affordable consultations, experienced care, and appointment-based eye checkups." />
+  <meta name="theme-color" content="#0f6b73" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&f[]=zodiak@400,500,700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root,
+    [data-theme="light"] {
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.75rem);
+      --space-1: 0.25rem;
+      --space-2: 0.5rem;
+      --space-3: 0.75rem;
+      --space-4: 1rem;
+      --space-5: 1.25rem;
+      --space-6: 1.5rem;
+      --space-8: 2rem;
+      --space-10: 2.5rem;
+      --space-12: 3rem;
+      --space-16: 4rem;
+      --space-20: 5rem;
+      --color-bg: #f5f8f8;
+      --color-surface: #fbfdfd;
+      --color-surface-2: #f1f6f6;
+      --color-surface-offset: #e6efef;
+      --color-divider: #d7e1e1;
+      --color-border: #cad6d6;
+      --color-text: #152224;
+      --color-text-muted: #526366;
+      --color-text-faint: #7f8f92;
+      --color-text-inverse: #f7fbfb;
+      --color-primary: #0f6b73;
+      --color-primary-hover: #0b5359;
+      --color-primary-highlight: #d5e8e8;
+      --color-secondary: #14435f;
+      --color-success: #2f6d42;
+      --radius-sm: 0.375rem;
+      --radius-md: 0.5rem;
+      --radius-lg: 0.875rem;
+      --radius-xl: 1.25rem;
+      --radius-full: 9999px;
+      --shadow-sm: 0 1px 2px oklch(0.2 0.01 80 / 0.06);
+      --shadow-md: 0 8px 24px oklch(0.2 0.01 80 / 0.08);
+      --shadow-lg: 0 20px 40px oklch(0.2 0.01 80 / 0.12);
+      --transition: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+      --font-body: 'General Sans', 'Inter', sans-serif;
+      --font-display: 'Zodiak', 'Georgia', serif;
+      --content-default: 1120px;
+    }
+
+    [data-theme="dark"] {
+      --color-bg: #0f1415;
+      --color-surface: #141b1d;
+      --color-surface-2: #192224;
+      --color-surface-offset: #1f2a2d;
+      --color-divider: #273235;
+      --color-border: #334144;
+      --color-text: #dbe5e5;
+      --color-text-muted: #a8b6b8;
+      --color-text-faint: #7a8a8d;
+      --color-text-inverse: #0d1213;
+      --color-primary: #63aeb3;
+      --color-primary-hover: #85c2c6;
+      --color-primary-highlight: #203335;
+      --color-secondary: #8fb9d2;
+      --color-success: #80bf92;
+      --shadow-sm: 0 1px 2px oklch(0 0 0 / 0.2);
+      --shadow-md: 0 8px 24px oklch(0 0 0 / 0.28);
+      --shadow-lg: 0 20px 40px oklch(0 0 0 / 0.36);
+    }
+
+    *,
+    :before,
+    :after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html {
+      -webkit-text-size-adjust: none;
+      text-size-adjust: none;
+      scroll-behavior: smooth;
+      scroll-padding-top: 5rem
+    }
+
+    body {
+      min-height: 100dvh;
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      line-height: 1.65;
+      color: var(--color-text);
+      background:
+        radial-gradient(circle at top right, color-mix(in oklab, var(--color-primary) 10%, transparent), transparent 28%),
+        linear-gradient(180deg, var(--color-bg) 0%, var(--color-surface-2) 100%);
+    }
+
+    img,
+    svg {
+      display: block;
+      max-width: 100%;
+      height: auto
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+      color: inherit
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      background: none
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: var(--font-display);
+      line-height: 1.08;
+      text-wrap: balance
+    }
+
+    p {
+      max-width: 66ch;
+      text-wrap: pretty
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 3px;
+      border-radius: var(--radius-sm)
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto
+      }
+
+      *,
+      *:before,
+      *:after {
+        animation: none !important;
+        transition: none !important
+      }
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 1rem;
+      z-index: 100
+    }
+
+    .skip-link:focus {
+      left: 1rem;
+      background: var(--color-primary);
+      color: var(--color-text-inverse);
+      padding: .75rem 1rem;
+      border-radius: var(--radius-md)
+    }
+
+    .container {
+      width: min(calc(100% - 2rem), var(--content-default));
+      margin-inline: auto
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      border-bottom: 1px solid color-mix(in oklab, var(--color-text) 10%, transparent);
+      background: color-mix(in oklab, var(--color-bg) 82%, transparent);
+      backdrop-filter: blur(16px)
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-4);
+      min-height: 76px
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3)
+    }
+
+    .brand-mark {
+      width: 48px;
+      height: 48px;
+      padding: 8px;
+      border-radius: 14px;
+      background: var(--color-surface);
+      border: 1px solid color-mix(in oklab, var(--color-text) 8%, transparent);
+      box-shadow: var(--shadow-sm)
+    }
+
+    .brand-copy strong {
+      display: block;
+      font-size: var(--text-sm)
+    }
+
+    .brand-copy span {
+      display: block;
+      font-size: var(--text-xs);
+      color: var(--color-text-muted)
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: var(--space-4)
+    }
+
+    .nav a {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted)
+    }
+
+    .nav a:hover {
+      color: var(--color-text)
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3)
+    }
+
+    .theme-toggle,
+    .menu-toggle {
+      min-width: 44px;
+      min-height: 44px;
+      display: grid;
+      place-items: center;
+      border-radius: var(--radius-full);
+      border: 1px solid color-mix(in oklab, var(--color-text) 10%, transparent);
+      background: var(--color-surface)
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-2);
+      min-height: 48px;
+      padding: 0 var(--space-5);
+      border-radius: var(--radius-full);
+      font-size: var(--text-sm);
+      font-weight: 600;
+      transition: background var(--transition), color var(--transition), border-color var(--transition), transform var(--transition), box-shadow var(--transition)
+    }
+
+    .btn:hover {
+      transform: translateY(-1px)
+    }
+
+    .btn-primary {
+      background: var(--color-primary);
+      color: var(--color-text-inverse);
+      box-shadow: var(--shadow-md)
+    }
+
+    .btn-primary:hover {
+      background: var(--color-primary-hover)
+    }
+
+    .btn-secondary {
+      background: var(--color-surface);
+      border: 1px solid color-mix(in oklab, var(--color-text) 10%, transparent)
+    }
+
+    main section {
+      padding: clamp(var(--space-10), 8vw, var(--space-20)) 0
+    }
+
+    .hero {
+      padding-top: clamp(var(--space-12), 12vw, 8rem)
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: var(--space-8);
+      align-items: center
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .5rem .9rem;
+      border-radius: var(--radius-full);
+      background: var(--color-primary-highlight);
+      color: var(--color-primary);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase
+    }
+
+    .hero h1 {
+      font-size: var(--text-2xl);
+      margin-top: var(--space-5);
+      max-width: 10ch
+    }
+
+    .hero p {
+      margin-top: var(--space-5);
+      color: var(--color-text-muted)
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: var(--space-3);
+      flex-wrap: wrap;
+      margin-top: var(--space-6)
+    }
+
+    .hero-card,
+    .panel,
+    .metric,
+    .quote-card,
+    .info-card,
+    .hours-card,
+    .visit-card,
+    .service-card {
+      background: color-mix(in oklab, var(--color-surface) 92%, transparent);
+      border: 1px solid color-mix(in oklab, var(--color-text) 9%, transparent);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-sm)
+    }
+
+    .hero-card {
+      padding: var(--space-6);
+      display: grid;
+      gap: var(--space-4)
+    }
+
+    .hero-card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--space-3)
+    }
+
+    .metric {
+      padding: var(--space-4);
+      background: var(--color-surface-2)
+    }
+
+    .metric strong {
+      display: block;
+      font-size: var(--text-lg);
+      font-variant-numeric: tabular-nums
+    }
+
+    .metric span {
+      display: block;
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      margin-top: .25rem
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: var(--space-4);
+      margin-bottom: var(--space-6)
+    }
+
+    .section-head p {
+      color: var(--color-text-muted)
+    }
+
+    .services-grid,
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: var(--space-4)
+    }
+
+    .service-card,
+    .quote-card,
+    .info-card,
+    .hours-card,
+    .visit-card {
+      padding: var(--space-5)
+    }
+
+    .service-tag {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 42px;
+      min-height: 42px;
+      border-radius: 12px;
+      background: var(--color-surface-offset);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-bottom: var(--space-4)
+    }
+
+    .service-card p,
+    .quote-card p,
+    .info-card p,
+    .hours-card p,
+    .visit-card p {
+      color: var(--color-text-muted);
+      margin-top: var(--space-3)
+    }
+
+    .split-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-6)
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-3);
+      margin-top: var(--space-5)
+    }
+
+    .chip {
+      padding: .6rem .9rem;
+      border-radius: var(--radius-full);
+      background: var(--color-surface-offset);
+      color: var(--color-text);
+      font-size: var(--text-sm)
+    }
+
+    .list {
+      list-style: none;
+      display: grid;
+      gap: var(--space-3);
+      margin-top: var(--space-5)
+    }
+
+    .list li {
+      display: flex;
+      justify-content: space-between;
+      gap: var(--space-4);
+      padding-bottom: var(--space-3);
+      border-bottom: 1px solid var(--color-divider)
+    }
+
+    .list li:last-child {
+      padding-bottom: 0;
+      border-bottom: none
+    }
+
+    .quote-card h3 {
+      font-size: var(--text-lg);
+      font-family: var(--font-body);
+      line-height: 1.4
+    }
+
+    .quote-meta {
+      margin-top: var(--space-4);
+      font-size: var(--text-sm);
+      color: var(--color-text-faint)
+    }
+
+    .cta-band {
+      padding: var(--space-8);
+      border-radius: calc(var(--radius-xl) + .25rem);
+      background: linear-gradient(135deg, color-mix(in oklab, var(--color-primary) 12%, var(--color-surface)) 0%, var(--color-surface) 100%);
+      border: 1px solid color-mix(in oklab, var(--color-primary) 18%, transparent);
+      box-shadow: var(--shadow-md)
+    }
+
+    .map-embed {
+      width: 100%;
+      min-height: 340px;
+      border: 0;
+      border-radius: var(--radius-xl);
+      background: var(--color-surface-offset)
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-3);
+      margin-top: var(--space-5)
+    }
+
+    .site-footer {
+      padding: var(--space-8) 0;
+      border-top: 1px solid var(--color-divider);
+      color: var(--color-text-muted)
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: var(--space-4);
+      flex-wrap: wrap
+    }
+
+    .note {
+      font-size: var(--text-xs);
+      color: var(--color-text-faint);
+      margin-top: var(--space-3)
+    }
+
+    .menu-toggle {
+      display: none
+    }
+
+    @media (max-width: 920px) {
+
+      .hero-grid,
+      .services-grid,
+      .review-grid,
+      .split-grid {
+        grid-template-columns: 1fr
+      }
+
+      .nav {
+        display: none;
+        position: absolute;
+        top: 76px;
+        left: 1rem;
+        right: 1rem;
+        background: var(--color-surface);
+        padding: var(--space-4);
+        border-radius: var(--radius-xl);
+        border: 1px solid color-mix(in oklab, var(--color-text) 9%, transparent);
+        box-shadow: var(--shadow-lg);
+        flex-direction: column;
+        align-items: flex-start
+      }
+
+      .nav[data-open="true"] {
+        display: flex
+      }
+
+      .menu-toggle {
+        display: grid
+      }
+
+      .header-actions .btn {
+        display: none
+      }
+
+      .hero h1 {
+        max-width: 12ch
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="Crystal Eye Clinic">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="6" y="6" width="36" height="36" rx="12" stroke="currentColor" stroke-width="2.5" />
+            <path d="M12 24c3.2-5.1 7.4-7.7 12-7.7S32.8 18.9 36 24c-3.2 5.1-7.4 7.7-12 7.7S15.2 29.1 12 24Z"
+              stroke="currentColor" stroke-width="2.5" />
+            <circle cx="24" cy="24" r="4.2" fill="currentColor" />
+          </svg>
+        </span>
+        <span class="brand-copy">
+          <strong>Crystal Eye Clinic</strong>
+          <span>Eye care center · Chennai</span>
+        </span>
+      </a>
+      <nav class="nav" id="site-nav" aria-label="Primary navigation">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#visit">Visit</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="menu-toggle" aria-label="Toggle navigation" aria-controls="site-nav"
+          aria-expanded="false">☰</button>
+        <button class="theme-toggle" data-theme-toggle aria-label="Switch theme"></button>
+        <a class="btn btn-primary" href="tel:07708939644">Book appointment</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Trusted Eye Care in Chennai</span>
+          <h1>Clear Vision Starts Here – Affordable, Expert Eye Care</h1>
+          <p>Crystal Eye Clinic is a trusted eye care center located in Agramthen, Chennai, known for delivering quality
+            treatment with a patient-first approach. We provide reliable and affordable eye care services tailored to
+            your needs.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="tel:07708939644">Call now</a>
+            <a class="btn btn-secondary" href="#visit">Get directions</a>
+          </div>
+          <div class="chip-row" aria-label="Clinic highlights">
+            <span class="chip">Experienced ophthalmologist</span>
+            <span class="chip">20 years of experience</span>
+            <span class="chip">Comprehensive Eye Check up</span>
+            <span class="chip">Appointment advised</span>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Clinic highlights card">
+          <div class="hero-card-grid">
+            <div class="metric"><strong>Opticals</strong><span></span></div>
+            <div class="metric"><strong>Eye Fitness Evaluation</strong><span></span></div>
+            <div class="metric"><strong>Monday-Saturday</strong><span>Opens 5:30 PM</span></div>
+            <div class="metric"><strong>Appointment advised</strong><span></span></div>
+          </div>
+          <ul class="list" role="list">
+            <li><span>Phone</span><strong>+91 77089 39644</strong></li>
+            <li><span>Address</span><strong>163, Athiyamman Street</strong></li>
+            <li><span>Area</span><strong>Panchayat Colony, Chennai</strong></li>
+          </ul>
+          <p class="note">call and book an appointment for faster eye checkup.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Services Provided</h2>
+          </div>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            
+            <h3>Comprehensive Eye Checkup</h3>
+            <br>
+            <ul>
+              <li>Retina checkup.</li>
+              <li>Evaluation for computer vision-related problems.</li>
+              <li>Eye fitness assessment.</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            
+            <h3>Catract and Glaucoma Treatment</h3>
+            <br>
+            <ul>
+              <li>Glaucoma Evaluation</li>
+              <li>Squint Evaluation</li>
+              <li>Cataract Surgery</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+          
+            <h3>Additional Services</h3>
+            <br
+            <ul>
+              <li>Pharmacy</li>
+              <li>Opticals</li>
+              <li>Periodic Checkup for Diabetic retinopathy</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container split-grid">
+        <article class="info-card">
+          <h2>About the clinic</h2>
+          <p>Crystal Eye Clinic is your trusted neighborhood eye care center, led by Dr. Cynthia — an experienced ophthalmologist with over 20 years of expertise in diagnosing and treating a wide range of eye conditions. Known for her warm, patient-first approach, Dr. Cynthia makes every visit comfortable and reassuring. Whether you're coming in for a routine eye checkup or seeking expert advice on a specific concern, Crystal Eye Clinic delivers dependable, compassionate care close to home.</p>
+          
+        </article>
+        <aside class="hours-card">
+          <h2>Visit information</h2>
+          <ul class="list" role="list">
+            <li><span>Category</span><strong>Eye care center</strong></li>
+            <li><span>Status</span><strong>Closed · Opens 5:30 PM Mon</strong></li>
+            <li><span>Phone</span><strong>077089 39644</strong></li>
+            <li><span>Plus Code</span><strong>V4QV+F3 Chennai</strong></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="reviews">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>What our patients say</h2>
+            
+          </div>
+        </div>
+        <div class="review-grid">
+          <article class="quote-card">
+            <h3>“Very kind and cooperative doctor, best ophthalmologist in my location.”</h3>
+            <p></p>
+            <div class="quote-meta"></div>
+          </article>
+          <article class="quote-card">
+            <h3>“Good service and very helpful people around.”</h3>
+            <p></p>
+            <div class="quote-meta"></div>
+          </article>
+          <article class="quote-card">
+            <h3>“I would highly recommend her for any eye problem.”</h3>
+            <p></p>
+            <div class="quote-meta"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="visit">
+      <div class="container split-grid">
+        <div class="visit-card">
+          <h2>Clinic location</h2>
+          <p>Crystal Eye Clinic is located at No:163, Athiyamman street, Kaspapuram Main Rd, Panchayat colony, Chennai,
+            Tamil Nadu 600126.</p>
+          <iframe class="map-embed" title="Crystal Eye Clinic map" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=No:163,%20Athiyamman%20street,%20Kaspapuram%20Main%20Rd,%20Panchayat%20colony,%20Chennai,%20Tamil%20Nadu%20600126&z=16&output=embed"></iframe>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="https://maps.app.goo.gl/Fx2g82rbXeMgoPyC9" target="_blank"
+              rel="noopener noreferrer">Open in Maps</a>
+            <a class="btn btn-secondary" href="tel:07708939644">Call clinic</a>
+          </div>
+        </div>
+        <aside class="info-card" id="contact">
+          <h2>Appointments and contact</h2>
+          <ul class="list" role="list">
+            <li><span>Phone</span><strong><a href="tel:07708939644">+91 77089 39644</a></strong></li>
+            <li><span>Address</span><strong>No:163, Athiyamman street</strong></li>
+            <li><span>Road</span><strong>Kaspapuram Main Rd</strong></li>
+            <li><span>Locality</span><strong>Panchayat colony, Chennai</strong></li>
+            <li><span>Postal code</span><strong>600126</strong></li>
+          </ul>
+
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Crystal Eye Clinic. Eye care center in Chennai.</p>
+
+    </div>
+  </footer>
+
+  <script>
+    const root = document.documentElement;
+    const themeToggle = document.querySelector('[data-theme-toggle]');
+    let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    const renderThemeIcon = () => {
+      themeToggle.innerHTML = theme === 'dark'
+        ? '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
+        : '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+      themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+    };
+    root.setAttribute('data-theme', theme);
+    renderThemeIcon();
+    themeToggle.addEventListener('click', () => {
+      theme = theme === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', theme);
+      renderThemeIcon();
+    });
+
+    const menuButton = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('#site-nav');
+    menuButton?.addEventListener('click', () => {
+      const open = nav.getAttribute('data-open') === 'true';
+      nav.setAttribute('data-open', String(!open));
+      menuButton.setAttribute('aria-expanded', String(!open));
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
