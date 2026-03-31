@@ -44,21 +44,21 @@
       --color-text-inverse: #f7fbfb;
       --color-primary: #0f6b73;
       --color-primary-hover: #0b5359;
-      --color-primary-highlight: #d5e8e8;
+      --color-primary-highlight: #e8f4f4;
       --color-secondary: #14435f;
       --color-success: #2f6d42;
       --radius-sm: 0.375rem;
-      --radius-md: 0.5rem;
-      --radius-lg: 0.875rem;
-      --radius-xl: 1.25rem;
+      --radius-md: 0.625rem;
+      --radius-lg: 1rem;
+      --radius-xl: 1.5rem;
       --radius-full: 9999px;
-      --shadow-sm: 0 1px 2px oklch(0.2 0.01 80 / 0.06);
-      --shadow-md: 0 8px 24px oklch(0.2 0.01 80 / 0.08);
-      --shadow-lg: 0 20px 40px oklch(0.2 0.01 80 / 0.12);
-      --transition: 180ms cubic-bezier(0.16, 1, 0.3, 1);
-      --font-body: 'General Sans', 'Inter', sans-serif;
+      --shadow-sm: 0 1px 2px oklch(0.2 0.01 80 / 0.04);
+      --shadow-md: 0 12px 32px -4px oklch(0.2 0.01 80 / 0.08);
+      --shadow-lg: 0 24px 48px -12px oklch(0.2 0.01 80 / 0.12);
+      --transition: 240ms cubic-bezier(0.16, 1, 0.3, 1);
+      --font-body: 'General Sans', 'Inter', -apple-system, sans-serif;
       --font-display: 'Zodiak', 'Georgia', serif;
-      --content-default: 1120px;
+      --content-default: 1200px;
     }
 
     [data-theme="dark"] {
@@ -533,6 +533,66 @@
       display: none
     }
 
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-6);
+      margin-top: var(--space-8);
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius-lg);
+      aspect-ratio: 16/10;
+      background: var(--color-surface-offset);
+      border: 1px solid color-mix(in oklab, var(--color-text) 8%, transparent);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .gallery-item figcaption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: var(--space-4);
+      background: linear-gradient(to top, oklch(0 0 0 / 0.8), transparent);
+      color: #fff;
+      font-size: var(--text-sm);
+      font-weight: 500;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity var(--transition), transform var(--transition);
+    }
+
+    .gallery-item:hover figcaption {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 640px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     @media (max-width: 920px) {
 
       .hero-grid,
@@ -596,10 +656,10 @@
       </a>
       <nav class="nav" id="site-nav" aria-label="Primary navigation">
         <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
         <a href="#about">About</a>
         <a href="#reviews">Reviews</a>
         <a href="#visit">Visit</a>
-        <a href="#contact">Contact</a>
       </nav>
       <div class="header-actions">
         <button class="menu-toggle" aria-label="Toggle navigation" aria-controls="site-nav"
@@ -657,7 +717,7 @@
 
         <div class="services-grid">
           <article class="service-card">
-            
+
             <h3>Comprehensive Eye Checkup</h3>
             <br>
             <ul>
@@ -668,7 +728,7 @@
           </article>
 
           <article class="service-card">
-            
+
             <h3>Catract and Glaucoma Treatment</h3>
             <br>
             <ul>
@@ -679,9 +739,9 @@
           </article>
 
           <article class="service-card">
-          
+
             <h3>Additional Services</h3>
-            <br
+            <br>
             <ul>
               <li>Pharmacy</li>
               <li>Opticals</li>
@@ -692,20 +752,54 @@
       </div>
     </section>
 
+    <section id="gallery">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Our Clinic</span>
+            <h2>Professional Facility</h2>
+            <p>A glimpse into our modern eye care center equipped with state-of-the-art diagnostic technology.</p>
+          </div>
+        </div>
+        <div class="gallery-grid">
+          <figure class="gallery-item">
+            <img src="assets/gallery/exterior.png" alt="Crystal Eye Clinic Exterior" loading="lazy">
+            <figcaption>Modern Clinic Exterior</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="assets/gallery/consultation.png" alt="Advanced Consultation Room" loading="lazy">
+            <figcaption>Premium Consultation Suites</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="assets/gallery/waiting.png" alt="Comfortable Waiting Lounge" loading="lazy">
+            <figcaption>Comfortable Waiting Area</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="assets/gallery/equipment.png" alt="Precision Diagnostic Equipment" loading="lazy">
+            <figcaption>State-of-the-art Diagnostics</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
     <section id="about">
       <div class="container split-grid">
         <article class="info-card">
           <h2>About the clinic</h2>
-          <p>Crystal Eye Clinic is your trusted neighborhood eye care center, led by Dr. Cynthia — an experienced ophthalmologist with over 20 years of expertise in diagnosing and treating a wide range of eye conditions. Known for her warm, patient-first approach, Dr. Cynthia makes every visit comfortable and reassuring. Whether you're coming in for a routine eye checkup or seeking expert advice on a specific concern, Crystal Eye Clinic delivers dependable, compassionate care close to home.</p>
-          
+          <p>Crystal Eye Clinic is your trusted neighborhood eye care center, led by Dr. Cynthia — an experienced
+            ophthalmologist with over 20 years of expertise in diagnosing and treating a wide range of eye conditions.
+            Known for her warm, patient-first approach, Dr. Cynthia makes every visit comfortable and reassuring.
+            Whether you're coming in for a routine eye checkup or seeking expert advice on a specific concern, Crystal
+            Eye Clinic delivers dependable, compassionate care close to home.</p>
+
         </article>
         <aside class="hours-card">
           <h2>Visit information</h2>
           <ul class="list" role="list">
             <li><span>Category</span><strong>Eye care center</strong></li>
-            <li><span>Status</span><strong>Closed · Opens 5:30 PM Mon</strong></li>
-            <li><span>Phone</span><strong>077089 39644</strong></li>
-            <li><span>Plus Code</span><strong>V4QV+F3 Chennai</strong></li>
+            <li><span>Status</span><strong>Monday-Saturday 5:30 PM Onwards</strong></li>
+            <li><span>Phone</span><strong>+91 77089 39644</strong></li>
+            <li><span>City</span><strong>Chennai</strong></li>
           </ul>
         </aside>
       </div>
@@ -716,7 +810,7 @@
         <div class="section-head">
           <div>
             <h2>What our patients say</h2>
-            
+
           </div>
         </div>
         <div class="review-grid">
